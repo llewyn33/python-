@@ -1,0 +1,38 @@
+# Dataframe
+
+生成dataframe
+
+```python
+data = {
+    'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'],
+    'year': [2000, 2001, 2002, 2001, 2002, 2003],
+    'pop': [1.5, 1.7, 3.6, 2.4, 2.9, 3.2]
+}
+frame = pd.DataFrame(data, columns=['year', 'state', 'pop', 'debt'],
+                     index=['one', 'two', 'three', 'four', 'five', 'six'])
+
+val = pd.Series([-1.2, -1.5, -1.7], index=['two', 'four', 'five'])
+frame['debt'] = val # 如果赋值的列不存在则生成新的列
+print(frame)
+
+# del可以删除列
+del frame['debt']
+
+# 嵌套字典
+pop = {
+    'Nevada': {
+        2001: 2.4,
+        2002: 2.9
+    },
+    'Ohio': {
+        2000: 1.5,
+        2001: 1.7,
+        2002: 3.6
+    }
+}
+
+frame = pd.DataFrame(pop)
+frame = frame.sort_index()
+frame = frame.T
+print(frame)
+```
