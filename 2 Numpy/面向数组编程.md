@@ -1,0 +1,80 @@
+# 面向数组编程
+
+将条件逻辑作为数组操作
+
+```python
+xarr = np.array([1.1, 1.2, 1.3, 1.4, 1.5])
+yarr = np.array([2.1, 2.2, 2.3, 2.4, 2.5])
+cond = np.array([True, False, True, True, False])
+
+res = np.where(cond, xarr, yarr) # cond为一个布尔值数组
+print(res)
+
+# where的后两个参数可以是标量
+res = np.where(arr > 0, 2, arr)
+```
+
+聚合函数
+
+```python
+#聚合函数
+arr = np.random.randn(5,4)
+print(arr.mean())
+print(np.mean(arr))
+print(arr.sum())
+print(arr.cumsum())
+
+arr = np.arange(16).reshape(4, 4)
+print(arr)
+print(arr.sum(0)) # 0：计算每一列的和
+print(arr.sum(1)) # 1：计算每一行的和
+```
+
+布尔值数组的方法
+
+```python
+# 布尔值会强制为1(True),0(False)
+
+arr = np.random.randn(100)
+num = (arr>0).sum() # sum用来计算True的数量
+print(num)
+
+# any检查数组中是否至少有一个True
+# all检查数组中是否每个值都为True
+bools = np.array([True,False,True,False])
+a = bools.any()
+b = bools.all()
+```
+
+排序
+
+```python
+# 一维数组
+arr = np.random.randn(6)
+arr.sort()
+
+# 多维数组
+arr = np.random.randn(5,3)
+arr.sort(0) # 1
+```
+
+唯一值与其他集合逻辑
+
+```python
+# unique 返回数组中唯一值排序后形成的数组
+names = np.array(['Bob', 'Joe', 'Will', 'Bob', 'Will', 'Joe', 'Joe'])
+name_u = np.unique(names)
+print(name_u)
+
+# in1d 检查一个数组中的值是否在另一个数组中，并返回一个布尔值数组
+values = np.array([6, 0, 0, 3, 2, 5, 6])
+val = np.in1d(values, [2, 3, 6])
+print(val)
+
+# unique(x) 计算x的唯一值，并排序
+# intersect1d(x,y) 计算x和y的交集，并排序
+# union1d(x,y) 计算x和y的并集，并排序
+# in1d(x,y) 计算x中的元素是否包含在y中，返回一个布尔数组
+# setdiff1d(x,y) 差集，在x中不在y中的x的元素
+# setxor1d(x,y) 异或集，在x或y中，但不属于x，y交集的元素
+```
