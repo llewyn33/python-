@@ -1,0 +1,15 @@
+# Python基础
+
+[基础](Python%E5%9F%BA%E7%A1%80%2065f4d/%E5%9F%BA%E7%A1%80%20503d4.md)
+
+[列表](Python%E5%9F%BA%E7%A1%80%2065f4d/%E5%88%97%E8%A1%A8%20cba80.md)
+
+[字典](Python%E5%9F%BA%E7%A1%80%2065f4d/%E5%AD%97%E5%85%B8%203c226.md)
+
+[列表、集合和字典的推导式](Python%E5%9F%BA%E7%A1%80%2065f4d/%E5%88%97%E8%A1%A8%E3%80%81%E9%9B%86%E5%90%88%E5%92%8C%E5%AD%97%E5%85%B8%E7%9A%84%E6%8E%A8%2074a61.md)
+
+[函数](Python%E5%9F%BA%E7%A1%80%2065f4d/%E5%87%BD%E6%95%B0%206dff5.md)
+
+[文件](Python%E5%9F%BA%E7%A1%80%2065f4d/%E6%96%87%E4%BB%B6%2036b76.md)
+
+[异常](Python%E5%9F%BA%E7%A1%80%2065f4d/%E5%BC%82%E5%B8%B8%20430e4.md)
